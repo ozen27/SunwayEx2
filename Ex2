@@ -1,0 +1,41 @@
+def question_1():
+    new_video = int(input("Number of videos rented: "))
+    new_videoDay = int(input("Number of days rented: "))
+
+    oldie = int(input("Number of videos rented: "))
+    oldieDay = int(input("Number of days rented: "))
+
+    print(f"The total cost for Rental is: ${(new_video*new_videoDay*3) + (oldie*oldieDay*2)}")
+'''question_1()'''
+
+def question_2():
+    secondsTime = int(input("Enter elapsed time in seconds: "))
+    hours = secondsTime // 3600
+    minutes = (secondsTime % 3600) // 60
+    seconds = (secondsTime % 3600) % 60
+    print(f"{hours}:{minutes}:{seconds}")
+'''question_2()'''   
+
+def question_3():
+    income = float(input("Yearly income: "))
+    if income <= 2500:
+        print("Tax: 0")
+    elif income <= 10000:
+        incomeTax = income*0.05
+        print(f"Tax: {incomeTax}")
+    elif income <= 50000:
+        incomeTax = income*0.15
+        print(f"Tax: {incomeTax}") 
+    else:
+        incomeTax = income*0.25
+        print(f"Tax: {incomeTax}")
+'''question_3()'''  
+
+def question_4():
+    totaldata = int(input("Enter monthly data usage: "))
+    if totaldata <= 10:
+        dataCost = totaldata*15
+    else:
+        dataCost = ((totaldata-10)*30) + 10*15
+    print(f"Your data cost is RM{dataCost}")
+'''question_4()'''           
