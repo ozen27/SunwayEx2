@@ -1,0 +1,69 @@
+def question_1():
+    new_video = int(input("Number of videos rented: "))
+    new_videoDay = int(input("Number of days rented: "))
+
+    oldie = int(input("Number of videos rented: "))
+    oldieDay = int(input("Number of days rented: "))
+
+    totalcost = (new_video*new_videoDay*3) + (oldie*oldieDay*2)
+    print(f"The total cost for Rental is: ${totalcost:.2f}")
+'''question_1()''' 
+
+def question_2():
+    secondsTime = int(input("Enter elapsed time in seconds: "))
+    hours = secondsTime // 3600
+    secondRemain = secondsTime - (3600 * hours)
+    minutes = secondRemain // 60
+    seconds = secondRemain % 60
+    print(str(hours).rjust(2,"0") + ":" +  str(minutes).rjust(2,"0") + ":" + str(seconds).rjust(2,"0"))
+'''question_2()'''   
+
+def question_3():
+    income = float(input("Yearly income: "))
+    if income <= 2500:
+        print("Tax: 0")
+    elif income <= 10000:
+        incomeTax = income*0.05
+        print(f"Tax: {incomeTax}")
+    elif income <= 50000:
+        incomeTax = income*0.15
+        print(f"Tax: {incomeTax}") 
+    else:
+        incomeTax = income*0.25
+        print(f"Tax: {incomeTax}")
+'''question_3()''' 
+
+def question_4():
+    totaldata = int(input("Enter monthly data usage: "))
+    if totaldata <= 10:
+        dataCost = totaldata*15
+    else:
+        dataCost = ((totaldata-10)*30) + 10*15
+    print(f"Your data cost for {totaldata:.2f}GB is RM{dataCost:.2f}")
+question_4() 
+
+def question_5():
+    areaType = input("Please input shape type ('R' or 'r' for rectangle and 'C' or 'c' for circle): ").lower()
+    if areaType == 'r':
+        RecLength = float(input("Enter length: "))
+        RecWidth = float(input("Enter width: "))
+        RecArea = RecLength*RecWidth
+        print(f"Area of rectangle is {RecArea:.2f}")
+    elif areaType == 'c':
+        CirRadius = float(input("Enter radius: "))
+        pi = 3.14159
+        CircArea = pi*(CirRadius**2)
+        print(f"Area of circle is {CircArea:.2f}")        
+'''question_5()'''
+
+'''def question_6():
+    week_drink = input("Enter a number which corresponds to the day of the week (1 = Monday, etc): ")
+    
+    match week_drink:
+        case 1:  
+            print("peppermint Mocha.")
+        case 2:
+            print("Candy Bar Latte.")
+        case 3:
+            print("Caramel Coffee.")
+question_6()'''            
